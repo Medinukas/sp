@@ -39,15 +39,11 @@ var app = {
         	function (isAvailable) {
         		alert(isAvailable ? 'Service is available' : 'Service NOT available');
         		
-        		cordova.plugins.printer.print('http://blackberry.de', 'BB!!!', function () {
+        		cordova.plugins.printer.print(page, 'Document.html', function () {
         		    alert('printing finished or canceled')
         		});
         	}
         );
-        
-        cordova.plugins.printer.print('http://blackberry.de', 'BB!!!', function () {
-            alert('printing finished or canceled')
-        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
